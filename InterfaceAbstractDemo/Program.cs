@@ -10,8 +10,11 @@ namespace InterfaceAbstractDemo
     {
         private static void Main(string[] args)
         {
+            //yıla göre doğrulama yapıyor. doğum yılınızı doğru giriniz ve gerçek isim, soyisim tc kullanın.
+            //yanlış girdiğinizde invalid duracaktır.
+            //
             BaseCustomerManager customerManager = new NeroCustomerManager(new MernisServiceAdapter());
-            customerManager.Save(new Customer { DateOfBirth = new DateTime(1985, 1, 6), FirstName = "Engin", LastName = "Demiroğ", Id = 1, NationalityId = "123454555555" });
+            customerManager.Save(new Customer { DateOfBirth = new DateTime(1995, 8, 15), FirstName = "Özge", LastName = "Çakır", Id = 1, NationalityId = "Kendi TC Kimlik No girin" });
             Console.ReadLine();
           
         }
